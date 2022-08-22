@@ -1,24 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import { Box } from "@mui/system";
+import Navbar from "./components/Navbar/Navbar";
+import TableComponent from "./components/TableComponent/TableComponent";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box sx={{ bgcolor: "#f4f4f4", minHeight: "100vh" }}>
+      <Navbar>
+        <Box sx={{ overflowX: "scroll", maxWidth: "1440px", mx: "auto" }}>
+          <TableComponent />
+        </Box>
+      </Navbar>
+    </Box>
   );
 }
 
